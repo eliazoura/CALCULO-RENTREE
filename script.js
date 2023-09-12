@@ -118,6 +118,8 @@ function solution() {
 
     console.log("🚀 ~ file: script.js:120 ~ solution ~ resultat TYPEOF:", typeof resultat)
 
+    chaineOp.textContent=resultat;
+
 
 //
 //    let monEgal = Number(resultat);
@@ -165,12 +167,12 @@ function clavier(event) {
 
 function resetAll() {
 
-    console.log("EXE DE RESETALL");
+    console.log("EXE DE RESET ALL");
     
     
-    
-    let LCDintant = document.getElementById("idtxtecran");
-    LCDintant.innerText = "000";
+    //
+    //let LCDintant = document.getElementById("idtxtecran");
+    LCD.innerText = "00";
     
     //console.log("myLCDintant.classList",myLCDintant.classList);
     //LCDintant.classList.replace("txtecranV", "txtecran");
