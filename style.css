@@ -91,9 +91,10 @@ body{
       }
 
       .tik{
+         /*margin-top: 0px;
+         margin-bottom: 0px;*/
 
-         margin-top: 0px;
-         margin-bottom: 0px;
+   
 
          height: 100%;
 
@@ -132,6 +133,8 @@ body{
 
       }
 
+      
+
 
 
 /*  ################################# LES BOUTONS ####################################    */
@@ -139,9 +142,11 @@ body{
 button{
 
 
-
+/*
       background-color:var(--backGButton);
-      background: var(--degBackButton);
+      background: var(--degBackButton);*/
+
+background: rgb(41, 41, 41);
 
 
       border-radius: 5px;
@@ -157,7 +162,27 @@ button{
 
 }
 
+button:hover {
 
+
+   /*
+         background-color:var(--backGButton);
+         background: var(--degBackButton);*/
+   
+         background: rgb(16, 16, 16);
+         
+         border-radius: 5px;
+   
+         font-size: 35px;
+   
+         border-color: black;
+   
+
+   
+   
+         color: rgb(255, 115, 0);
+   
+   }
 
 
 
@@ -230,10 +255,20 @@ button{
 
 }
 
+
+.num:hover{
+
+   font-size: 30px;
+
+   color: rgb(255, 212, 0);
+   border: 0px;
+
+}
+
 .op{
 
    font-size: 25px;
-   color: rgb(211, 138, 12);
+         color: rgb(255, 212, 0);
 
 }
 
