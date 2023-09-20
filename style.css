@@ -153,6 +153,7 @@ button:hover {
   border-color: black;
 
   color: rgb(255, 115, 0);
+  transform: translateY(2px);
 }
 
 .act {
