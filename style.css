@@ -67,19 +67,6 @@ body {
   background-color: rgba(191, 167, 223, 0.627);
 }
 
-/*.opflux{
-
-         margin-top: 0px;
-
-         background-color:rgba(0, 0, 0, 0);
-         color: rgb(176, 154, 198);
-
-         padding-top: 15px;
-         padding-left: 20px ;
-
-
-      }*/
-
 .tik {
   /*margin-top: 0px;
          margin-bottom: 0px;*/
@@ -153,24 +140,11 @@ button:hover {
   border-color: black;
 
   color: rgb(255, 115, 0);
+  transform: translateY(2px);
 }
 
 .act {
   display: grid;
-
-  /*
-      
-      grid-template-areas: 
-      "abc abc abc abc"
-      "abc abc abc abc"
-      "abc abc abc abc"
-      "abc abc abc abc"
-      "abc abc abc abc";
-
-      
-      
-      
-      */
 
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
