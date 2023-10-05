@@ -19,6 +19,37 @@ body {
 
   background-color: rgb(0, 0, 0);
 }
+.block {
+  height: max-content;
+  width: fit-content;
+  /*background-color: aqua;*/
+  margin: auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100vw;
+  background-color: rgba(240, 248, 255, 0.126);
+  text-align: center;
+  font-size: medium;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /*align-items: auto;*/
+}
+
+h1 {
+  font-size: xx-large;
+  color: aliceblue;
+}
+
+.pic {
+  height: 50px;
+  width: 50px;
+  padding-top: 10px;
+}
 
 .machine {
   margin: 0 auto;
@@ -27,6 +58,8 @@ body {
   height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 70px 1fr;
+  margin-top: 100px;
+  /*padding-top: 200px;*/
   /*
    
       grid-template-areas: 
@@ -55,29 +88,36 @@ body {
 
 .display {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 210px 70px;
 
   height: 100%;
 
   row-gap: 3px;
 
-  padding-left: 0px;
-
-  background-color: rgba(191, 167, 223, 0.627);
+  background-color: rgba(41, 41, 41, 0.627);
 }
 
-.tik {
-  /*margin-top: 0px;
-         margin-bottom: 0px;*/
+.ticket {
+  list-style-type: none;
 
-  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  height: 102%;
 
   color: rgb(224, 170, 64);
 
-  background-color: black;
   text-align: right;
   padding-right: 20px;
+
+  font-family: monospace;
+  font-style: italic;
+}
+
+.tikDisplay {
+  /*align-items: end;*/
+  align-self: end;
+  padding-bottom: 20px;
 }
 
 .rez {
@@ -99,7 +139,7 @@ body {
     rgba(45, 45, 45, 1) 95%
   );
 
-  padding: 0px 20px 60px 0px;
+  padding: 0px 20px 00px 0px;
   color: whitesmoke;
 
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;

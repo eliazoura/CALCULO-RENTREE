@@ -6,14 +6,51 @@
 
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static.wixstatic.com/media/67301c_9ea83d448c9c4fc89ebbcb4f680dc15c~mv2.png"
+    />
+
     <title>CALCULO RENTREE</title>
   </head>
   <body>
+    <header>
+      <div>
+        <a href="http://eliazoura.fr" target="_blank" rel="noopener noreferrer">
+          <img
+            class="pic"
+            alt=""
+            src="https://static.wixstatic.com/media/67301c_9ea83d448c9c4fc89ebbcb4f680dc15c~mv2.png"
+          />
+        </a>
+      </div>
+
+      <div class="block">
+        <h1 class="montitre">C A L C O N L I N E</h1>
+      </div>
+      <div>
+        <a
+          target="_blank"
+          href="http://github.com/eliazoura"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="pic"
+            src="pics/github-mark/github-mark-white.png"
+            alt="GitHub Eli Azoura"
+          />
+        </a>
+      </div>
+    </header>
+
     <div class="machine">
       <div class="display">
-        <!--<p class="opflux">opflux</p>-->
-        <div class="except">
-          <p class="tik">ticket?</p>
+        <div class="tikDisplay">
+          <ul>
+            <li id="tik" class="ticket">ready</li>
+          </ul>
         </div>
 
         <p class="rez" id="idtxtecran">00</p>
@@ -48,7 +85,7 @@
         <button class="op" id="diviz">/</button>
         <button class="der">del</button>
         <button class="num">0</button>
-        <button class="der" id="dec">.</button>
+        <button class="dec" id="dec">.</button>
         <button class="der" id="egal">=</button>
       </div>
     </div>

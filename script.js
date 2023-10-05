@@ -6,6 +6,11 @@ let LCD = document.getElementById("idtxtecran");
 let classLCD = LCD.className;
 console.log("classLCD", classLCD);
 
+let myTik = document.getElementById("tik");
+
+/**
+ * objet contenant l'affichage écran
+ */
 let ecranTxt = {
   color: "white",
   txt: [],
@@ -25,6 +30,7 @@ allReset.addEventListener("click", resetAll);
 
 let solu = document.getElementById("egal");
 solu.addEventListener("click", solution);
+//solu.addEventListener("click", ticket);
 
 // /////////////////////////////////////////////////////////////////
 
@@ -82,38 +88,43 @@ function insertOp() {
 function solution() {
   console.log("SOLUTION EN COURS");
   let chaineOp = document.getElementById("idtxtecran");
-
-  let resultat = eval(chaineOp.innerHTML);
-  console.log("🚀 ~ file: script.js:120 ~ solution ~ resultat:", resultat);
-
-  console.log(
-    "🚀 ~ file: script.js:120 ~ solution ~ resultat TYPEOF:",
-    typeof resultat
-  );
+  let operations = chaineOp.innerHTML;
+  //console.log("🚀 ~ file: script.js:92 ~ solution ~ operations:", operations);
+  let resultat = eval(operations);
+  //  console.log("🚀 ~ file: script.js:120 ~ solution ~ resultat:", resultat);
+  //
+  //  console.log(
+  //    "🚀 ~ file: script.js:120 ~ solution ~ resultat TYPEOF:",
+  //    typeof resultat
+  //  );
 
   chaineOp.textContent = resultat;
 
-  //
-  //    let monEgal = Number(resultat);
-  //    console.log("🚀 ~ file: script.js:124 ~ solution ~ monEgal:", monEgal)
-
-  //let resultat = eval(chaineOp)    ;
-  //console.log("🚀 ~ file: script.js:117 ~ solution ~ resultat:", resultat)
+  ticket(operations);
 }
 
-/**
- *
- * @param {event} event
- */
-function clavier(event) {
-  event.preventDefault();
-  console.log("Hello CLAVIER");
-  console.log("Code clavier ", event.key);
-  monType = typeof event.key;
-  monTest = event.key;
+function ticket(operations) {
+  let line = document.createElement("li");
+  myTik.appendChild(line);
+
+  line.textContent += operations;
+}
+
+function resetAll() {
+  console.log("EXE DE RESET ALL");
+  LCD.innerText = "00";
+  myTik.textContent = "ready";
 }
 
 // A DEV PLUS TARD POUR AJOUTER LES FONCTIONS CLAVIER
+
+//function clavier(event) {
+//  event.preventDefault();
+//  console.log("Hello CLAVIER");
+//  console.log("Code clavier ", event.key);
+//  monType = typeof event.key;
+//  monTest = event.key;
+//}
 
 //function clavier(event) {
 //    event.preventDefault();
@@ -126,89 +137,82 @@ function clavier(event) {
 //
 //}
 
-function resetAll() {
-  console.log("EXE DE RESET ALL");
+//console.log("myLCDintant.classList",myLCDintant.classList);
+//LCDintant.classList.replace("txtecranV", "txtecran");
 
-  //
-  //let LCDintant = document.getElementById("idtxtecran");
-  LCD.innerText = "00";
-
-  //console.log("myLCDintant.classList",myLCDintant.classList);
-  //LCDintant.classList.replace("txtecranV", "txtecran");
-
-  //
-  //let testOpMoins = document.getElementById("moins");
-  //let testOpPlus = document.getElementById("plus");
-  //
-  //let testOpDiviz = document.getElementById("diviz");
-  //let testOpMulti = document.getElementById("multi");
-  //
-  /*
+//
+//let testOpMoins = document.getElementById("moins");
+//let testOpPlus = document.getElementById("plus");
+//
+//let testOpDiviz = document.getElementById("diviz");
+//let testOpMulti = document.getElementById("multi");
+//
+/*
         testOpMoins.classList.remove("symbolsClick");
         testOpMoins.classList.add("symbolsClick");
     */
-  //
-  //testOpMoins.classList.replace("symbolsClick", "symbols");
-  //testOpDiviz.classList.replace("symbolsClick", "symbols");
-  //testOpMulti.classList.replace("symbolsClick", "symbols");
-  //testOpPlus.classList.replace("symbolsClick", "symbols");
-  //
-  //ecranTxt = objetNeutre;
-  //
-  //opSymbol = objetNeutre;
-  //
-  //console.log("ecranTxt",   ecranTxt   );
-  //
-  //console.log("opSymbol",   opSymbol   );
-  //
-}
+//
+//testOpMoins.classList.replace("symbolsClick", "symbols");
+//testOpDiviz.classList.replace("symbolsClick", "symbols");
+//testOpMulti.classList.replace("symbolsClick", "symbols");
+//testOpPlus.classList.replace("symbolsClick", "symbols");
+//
+//ecranTxt = objetNeutre;
+//
+//opSymbol = objetNeutre;
+//
+//console.log("ecranTxt",   ecranTxt   );
+//
+//console.log("opSymbol",   opSymbol   );
+//
 
-function changeClass() {
-  console.log("- - - - E X E C U T ION changeClass - - - - ");
-  console.log("T h i s ID", this.getAttribute("id"));
-  console.log("T h i s ID CLASS", this.getAttribute("class"));
+//function changeClass() {
+//  console.log("- - - - E X E C U T ION changeClass - - - - ");
+//  console.log("T h i s ID", this.getAttribute("id"));
+//  console.log("T h i s ID CLASS", this.getAttribute("class"));
+//
+//  let LCDintant = document.getElementById("idtxtecran");
 
-  let LCDintant = document.getElementById("idtxtecran");
+//ci dessous changement de classe des boutons opérateurs désactivés pour l'instant
 
-  //if (LCDintant.classList == "txtecranV") {
-  //
-  //    LCDintant.classList.replace("txtecranV", "txtecran")
-  //}
-  //
-  //let classMoins = document.getElementById("moins");
-  //let classPlus = document.getElementById("plus");
-  //
-  //let classDiviz = document.getElementById("diviz");
-  //let classMulti = document.getElementById("multi");
-  //
-  //
-  //
-  //if (classMoins.classList == "symbolsClick") {
-  //    classMoins.classList.replace("symbolsClick", "symbols")
-  //}
-  //
-  //if (classPlus.classList  == "symbolsClick") {
-  //    classPlus.classList.replace("symbolsClick", "symbols")
-  //}
-  //
-  //
-  //
-  //if (classDiviz.classList  == "symbolsClick") {
-  //    classDiviz.classList.replace("symbolsClick", "symbols")
-  //}
-  //
-  //if (classMulti.classList  == "symbolsClick") {
-  //    classMulti.classList.replace("symbolsClick", "symbols")
-  //}
-  //
-  //
-  //this.classList.replace("symbols", "symbolsClick");
-  //
-  //
-  //console.log("T h i s ID AFTER", this.getAttribute('class'));
-  //
-  //
-  //console.log("TEST DE CONTENU", this.classList.contains('symbolsClick')); // ?
-}
+//if (LCDintant.classList == "txtecranV") {
+//
+//    LCDintant.classList.replace("txtecranV", "txtecran")
+//}
+//
+//let classMoins = document.getElementById("moins");
+//let classPlus = document.getElementById("plus");
+//
+//let classDiviz = document.getElementById("diviz");
+//let classMulti = document.getElementById("multi");
+//
+//
+//
+//if (classMoins.classList == "symbolsClick") {
+//    classMoins.classList.replace("symbolsClick", "symbols")
+//}
+//
+//if (classPlus.classList  == "symbolsClick") {
+//    classPlus.classList.replace("symbolsClick", "symbols")
+//}
+//
+//
+//
+//if (classDiviz.classList  == "symbolsClick") {
+//    classDiviz.classList.replace("symbolsClick", "symbols")
+//}
+//
+//if (classMulti.classList  == "symbolsClick") {
+//    classMulti.classList.replace("symbolsClick", "symbols")
+//}
+//
+//
+//this.classList.replace("symbols", "symbolsClick");
+//
+//
+//console.log("T h i s ID AFTER", this.getAttribute('class'));
+//
+//
+//console.log("TEST DE CONTENU", this.classList.contains('symbolsClick')); // ?
 
 // ////////////////////////////////////////////////////////////////////////////////
